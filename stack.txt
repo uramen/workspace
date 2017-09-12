@@ -1,0 +1,6 @@
+NPM ~ 3.10
+Node ~ 6.11
+React, React-DOM ~ 15.6.1
+Webpack ~ 3.5.5
+Redux ~
+React Router 4
