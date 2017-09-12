@@ -20,7 +20,7 @@ const cssProd = ExtractTextPlugin.extract({
   })
 
 module.exports = {
-  entry: './app/index.js',
+  entry: ['react-hot-loader/patch', './app/index.js'],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: 'bundle.js'
@@ -28,14 +28,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ['react-hot-loader/webpack', 'babel-loader']
+      },
+      {
         test: /\.css$/,
         exclude: /node_modules/,
         use: isProduction ? cssProd : cssDev
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: 'babel-loader'
       },
       {
         test: /\.(jpe?g|png|svg|gif)$/,
@@ -58,6 +58,8 @@ module.exports = {
     compress: true,
     port: 3000,
     hot: true,
+    // quiet: true,
+    clientLogLevel: 'none'
     // stats: 'minimal'
   },
 
