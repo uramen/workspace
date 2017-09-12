@@ -27,16 +27,21 @@ module.exports = {
   },
   module: {
     rules: [
+      //HRM, BABEL, REACT
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: ['react-hot-loader/webpack', 'babel-loader']
       },
+
+      // POSTCSS
       {
         test: /\.css$/,
         exclude: /node_modules/,
         use: isProduction ? cssProd : cssDev
       },
+
+      //IMAGES
       {
         test: /\.(jpe?g|png|svg|gif)$/,
         use: [{
