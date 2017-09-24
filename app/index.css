@@ -1,7 +1,4 @@
 body {
-  height: 500px;
-  background: url('./1.png') center center no-repeat;
-  font-family: "Montez";
-  font-weight: bold;
-  font-size: 40px;
+  margin: 0px;
+  padding: 0px;
 }
