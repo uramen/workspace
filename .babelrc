@@ -8,5 +8,10 @@
   "plugins": [
     "react-hot-loader/babel",
     "transform-object-rest-spread"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": ["es2015", "react"]
+    }
+  }
 }
