@@ -1,14 +1,15 @@
-import { combineReducers } from 'redux'
-import chat from './chat'
+import {combineReducers} from 'redux';
+import some from './some';
 
 export const initialState = {
-  loading: false,
-  error: null,
-  data: null
-}
+	loading: false,
+	error  : null,
+	data   : null,
+};
 
-const app = combineReducers({
-  chat
-})
+const
+	app = combineReducers({
+		some,
+	});
 
-export default app
+export default app;
